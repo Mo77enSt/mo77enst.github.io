@@ -3,1349 +3,523 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHANGELING - Kunstgalerie</title>
-    <meta name="description" content="Changeling - Zeitgenössische Malerei und Kunst. Entdecken Sie einzigartige Acrylwerke.">
-    <meta name="keywords" content="changeling, kunst, malerei, acryl, kunstgalerie, zeitgenössisch">
-    <meta name="author" content="Changeling">
+    
+    <!-- SEO Enhanced Meta Tags -->
+    <meta name="description" content="ˈt͡su.rɘ/ - Lore ipsum">
+    <meta name="keywords" content="ˈt͡su.rɘ/, zeitgenössische kunst, acrylmalerei, moderne malerei, kunstgalerie, original gemälde, abstrakte kunst, kunstwerk kaufen, deutsche künstlerin, sammlung, pastell, mixed media">
+    <meta name="author" content="ˈt͡su.rɘ/">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Enhanced Open Graph -->
+    <meta property="og:title" content="ˈt͡su.rɘ/ - Zeitgenössische Acrylmalerei & Kunst">
+    <meta property="og:description" content="Einzigartige Acrylgemälde zwischen Eleganz und Leidenschaft. Entdecken Sie zeitgenössische Kunst von ˈt͡su.rɘ/ - Original Kunstwerke einer deutschen Künstlerin.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kori-art-gallery.github.io">
+    <meta property="og:site_name" content="ˈt͡su.rɘ/ Art Gallery">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ˈt͡su.rɘ/ - Zeitgenössische Acrylmalerei">
+    <meta name="twitter:description" content="Einzigartige Kunstwerke zwischen Eleganz und Leidenschaft. Deutsche Künstlerin ˈt͡su.rɘ/ präsentiert zeitgenössische Acrylmalerei.">
+    <meta name="twitter:creator" content="@_changeling13">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kori-art-gallery.github.io">
+    
+    <!-- Optimized Page Title -->
+    <title>ˈt͡su.rɘ/ - Lore Ipsum</title>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArtGallery",
+      "name": "ˈt͡su.rɘ/ Art Gallery",
+      "description": "Lore Ipsum",
+      "url": "https://kori-art-gallery.github.io",
+      "sameAs": [
+        "https://instagram.com/_changeling13"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "ˈt͡su.rɘ/",
+        "jobTitle": "Künstlerin",
+        "description": "Lore Ipsum"
+      },
+      "artworks": [
+        {
+          "@type": "CreativeWork",
+          "name": "Gallerie 1",
+          "creator": "ˈt͡su.rɘ/",
+          "artMedium": "Acryl auf Leinwand",
+          "width": "70cm",
+          "height": "50cm",
+          "dateCreated": "2024"
+        },
+        {
+          "@type": "CreativeWork", 
+          "name": "Gallerie 2",
+          "creator": "ˈt͡su.rɘ/",
+          "artMedium": "Pastell auf Papier",
+          "width": "60cm",
+          "height": "40cm", 
+          "dateCreated": "2024"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DE"
+      }
+    }
+    </script>
+    
+    <!-- Favicon (optional - falls vorhanden) -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
     
     <!-- Font Awesome CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
     
-    <style>
-        /* CSS Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Base Styles */
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: #f5f5f5;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Selection Colors */
-        ::selection {
-            background: rgba(233, 30, 99, 0.3);
-            color: #ffffff;
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #1a1a1a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
-            border-radius: 4px;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 15px 0;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #e91e63, #9c27b0, #ff6ec7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 3px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #f5f5f5;
-            text-decoration: none;
-            font-weight: 300;
-            transition: color 0.3s ease;
-            position: relative;
-            padding: 5px 0;
-        }
-
-        .nav-links a:hover {
-            color: #e91e63;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Navigation Dropdown */
-        .nav-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            min-width: 200px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1001;
-            padding: 10px 0;
-            margin-top: 10px;
-        }
-
-        .dropdown-content a {
-            color: #f5f5f5 !important;
-            padding: 12px 20px;
-            text-decoration: none;
-            display: block;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .dropdown-content a:hover {
-            background: rgba(233, 30, 99, 0.1);
-            color: #e91e63 !important;
-            padding-left: 25px;
-        }
-
-        .nav-dropdown:hover .dropdown-content {
-            display: block;
-            animation: dropdownFadeIn 0.3s ease;
-        }
-
-        @keyframes dropdownFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .dropdown-arrow {
-            margin-left: 5px;
-            font-size: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-dropdown:hover .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-
-        /* Language Selector */
-        .language-selector {
-            position: relative;
-            display: inline-block;
-        }
-
-        .language-button {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #f5f5f5;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-            text-decoration: none;
-        }
-
-        .language-button:hover {
-            background: rgba(233, 30, 99, 0.2);
-            border-color: rgba(233, 30, 99, 0.5);
-        }
-
-        .language-dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            min-width: 150px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1001;
-            padding: 10px 0;
-            margin-top: 10px;
-        }
-
-        .language-dropdown a {
-            color: #f5f5f5 !important;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .language-dropdown a:hover {
-            background: rgba(233, 30, 99, 0.1);
-            color: #e91e63 !important;
-        }
-
-        .language-dropdown a.active {
-            background: rgba(233, 30, 99, 0.2);
-            color: #e91e63 !important;
-        }
-
-        .language-selector:hover .language-dropdown {
-            display: block;
-            animation: dropdownFadeIn 0.3s ease;
-        }
-
-        .flag-icon {
-            width: 20px;
-            height: 15px;
-            border-radius: 2px;
-            display: inline-block;
-        }
-
-        .flag-de {
-            background: linear-gradient(to bottom, #000 33%, #dd0000 33%, #dd0000 66%, #ffcc00 66%);
-        }
-
-        .flag-en {
-            background: linear-gradient(45deg, #012169 25%, transparent 25%), 
-                        linear-gradient(-45deg, #012169 25%, transparent 25%),
-                        linear-gradient(45deg, transparent 75%, #012169 75%), 
-                        linear-gradient(-45deg, transparent 75%, #012169 75%);
-            background-size: 8px 8px;
-            background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
-            background-color: #ffffff;
-            position: relative;
-        }
-
-        .flag-en::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(to right, transparent 40%, #c8102e 40%, #c8102e 60%, transparent 60%),
-                linear-gradient(to bottom, transparent 40%, #c8102e 40%, #c8102e 60%, transparent 60%);
-        }
-
-        .flag-pl {
-            background: linear-gradient(to bottom, #ffffff 50%, #dc143c 50%);
-        }
-        .mobile-nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: #f5f5f5;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .mobile-nav-toggle:hover {
-            color: #e91e63;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(233, 30, 99, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(156, 39, 176, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(0, 188, 212, 0.05) 0%, transparent 50%);
-            animation: gradientShift 15s ease-in-out infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        .hero-content {
-            text-align: center;
-            z-index: 2;
-            max-width: 800px;
-            padding: 0 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 6vw, 6rem);
-            font-weight: 300;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #f5f5f5, #e91e63, #9c27b0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: #cccccc;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 60px;
-            color: #f5f5f5;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
-            border-radius: 2px;
-        }
-
-        /* Galleries Section */
-        .galleries-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .galleries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .gallery-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            position: relative;
-        }
-
-        .gallery-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: rgba(233, 30, 99, 0.3);
-        }
-
-        .gallery-carousel {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .carousel-container {
-            display: flex;
-            height: 100%;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .carousel-slide.slide-1 {
-            background: linear-gradient(135deg, 
-                rgba(46, 125, 50, 0.4), 
-                rgba(255, 235, 59, 0.3), 
-                rgba(0, 188, 212, 0.3));
-        }
-
-        .carousel-slide.slide-2 {
-            background: linear-gradient(135deg, 
-                rgba(141, 110, 99, 0.4), 
-                rgba(215, 204, 200, 0.3), 
-                rgba(93, 64, 55, 0.2));
-        }
-
-        .carousel-slide.slide-3 {
-            background: linear-gradient(135deg, 
-                rgba(255, 138, 101, 0.4), 
-                rgba(0, 188, 212, 0.3), 
-                rgba(233, 30, 99, 0.2));
-        }
-
-        .slide-content {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-        }
-
-        .slide-content i {
-            font-size: 3rem;
-            opacity: 0.3;
-            margin-bottom: 15px;
-        }
-
-        .carousel-nav {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-        }
-
-        .carousel-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-dot.active {
-            background: #e91e63;
-            transform: scale(1.2);
-        }
-
-        .carousel-controls {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            opacity: 0;
-        }
-
-        .gallery-card:hover .carousel-controls {
-            opacity: 1;
-        }
-
-        .carousel-controls:hover {
-            background: rgba(233, 30, 99, 0.7);
-        }
-
-        .carousel-prev {
-            left: 15px;
-        }
-
-        .carousel-next {
-            right: 15px;
-        }
-
-        .gallery-info {
-            padding: 25px;
-        }
-
-        .gallery-title {
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-bottom: 10px;
-            color: #f5f5f5;
-            transition: color 0.3s ease;
-        }
-
-        .gallery-card:hover .gallery-title {
-            color: #e91e63;
-        }
-
-        .gallery-description {
-            color: #cccccc;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .gallery-count {
-            color: #e91e63;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* About Section */
-        .about-section {
-            background: linear-gradient(135deg, 
-                rgba(233, 30, 99, 0.05), 
-                rgba(156, 39, 176, 0.05));
-        }
-
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .artist-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, 
-                rgba(233, 30, 99, 0.2), 
-                rgba(156, 39, 176, 0.2));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.7);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .artist-image:hover {
-            transform: scale(1.05);
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #cccccc;
-        }
-
-        .about-text h3 {
-            color: #f5f5f5;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-weight: 300;
-            background: linear-gradient(45deg, #f5f5f5, #e91e63);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-        /* Coming Soon Section */
-        .coming-soon-section {
-            text-align: center;
-            background: linear-gradient(135deg, 
-                rgba(156, 39, 176, 0.05), 
-                rgba(233, 30, 99, 0.05));
-        }
-
-        .coming-soon-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .coming-soon-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px dashed rgba(233, 30, 99, 0.3);
-            border-radius: 20px;
-            padding: 60px 40px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .coming-soon-card:hover {
-            border-color: rgba(233, 30, 99, 0.6);
-            transform: translateY(-5px);
-        }
-
-        .coming-soon-icon {
-            font-size: 4rem;
-            color: #e91e63;
-            margin-bottom: 30px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
-
-        .coming-soon-title {
-            font-size: 2.5rem;
-            color: #f5f5f5;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .coming-soon-description {
-            color: #cccccc;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        .age-badge {
-            display: inline-block;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            text-align: center;
-        }
-
-        .contact-container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .instagram-link {
-            display: inline-block;
-            background: linear-gradient(45deg, #e91e63, #9c27b0);
-            color: white;
-            text-decoration: none;
-            padding: 20px 40px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.3);
-        }
-
-        .instagram-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4);
-        }
-
-        .instagram-link i {
-            margin-right: 10px;
-            font-size: 1.3rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: rgba(10, 10, 10, 0.9);
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 100px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            color: #cccccc;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(10, 10, 10, 0.98);
-                flex-direction: column;
-                padding: 20px;
-                gap: 1rem;
-                border-top: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .nav-links.mobile-open {
-                display: flex;
-            }
-            
-            .mobile-nav-toggle {
-                display: block;
-            }
-            
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .galleries-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .hero-title {
-                font-size: clamp(2rem, 8vw, 4rem);
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .coming-soon-card {
-                padding: 40px 20px;
-            }
-
-            .coming-soon-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-card {
-                margin: 0 10px;
-            }
-
-            .instagram-link {
-                padding: 15px 30px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
 </head>
 <body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main" class="skip-link" aria-label="Zum Hauptinhalt springen">Zum Hauptinhalt springen</a>
+    
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hauptnavigation">
         <div class="nav-container">
-            <div class="logo" onclick="scrollToTop()">CHANGELING</div>
-            <div style="display: flex; align-items: center; gap: 2rem;">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li class="nav-dropdown">
-                        <a href="#galleries">
+            <a href="index.html" class="logo" aria-label="ˈt͡su.rɘ/ Kunstgalerie Startseite">ˈt͡su.rɘ/</a>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem" aria-current="page">Home</a></li>
+                    <li class="nav-dropdown" role="none">
+                        <a href="#galleries" role="menuitem" aria-haspopup="true" aria-expanded="false">
                             Gallerien
-                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <i class="fas fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
                         </a>
-                        <div class="dropdown-content">
-                            <a href="gallery1.html">Lorem Ipsum Collection</a>
-                            <a href="gallery2.html">Dolor Sit Gallery</a>
-                            <a href="gallery3.html">Consectetur Adipiscing</a>
+                        <div class="dropdown-content" role="menu" aria-label="Gallerien Untermenü">
+                            <a href="pages/gallery1.html" role="menuitem" title="Gallerie 1">Gallerie 1</a>
+                            <a href="pages/gallery2.html" role="menuitem" title="Gallerie 2">Gallerie 2</a>
+                            <a href="pages/gallery3.html" role="menuitem" title="Gallerie 3">Gallerie 3</a>
                         </div>
                     </li>
-                    <li><a href="#about">Über mich</a></li>
-                    <li><a href="#coming-soon">Coming Soon</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li role="none"><a href="#about" role="menuitem">Über mich</a></li>
+                    <li role="none"><a href="#coming-soon" role="menuitem">Coming Soon</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Kontakt</a></li>
                 </ul>
                 
                 <!-- Language Selector -->
-                <div class="language-selector">
-                    <div class="language-button">
-                        <span class="flag-icon flag-de"></span>
+                <div class="language-selector" role="listbox" aria-label="Sprache auswählen">
+                    <div class="language-button" role="option" aria-selected="true" tabindex="0">
+                        <span class="flag-icon flag-de" aria-hidden="true"></span>
                         DE
-                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        <i class="fas fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
                     </div>
-                    <div class="language-dropdown">
-                        <a href="index.html" class="active">
-                            <span class="flag-icon flag-de"></span>
+                    <div class="language-dropdown" role="listbox">
+                        <a href="index.html" class="active" role="option" aria-selected="true">
+                            <span class="flag-icon flag-de" aria-hidden="true"></span>
                             Deutsch
                         </a>
-                        <a href="index-en.html">
-                            <span class="flag-icon flag-en"></span>
+                        <a href="index-en.html" role="option" aria-selected="false">
+                            <span class="flag-icon flag-en" aria-hidden="true"></span>
                             English
                         </a>
-                        <a href="index-pl.html">
-                            <span class="flag-icon flag-pl"></span>
+                        <a href="index-pl.html" role="option" aria-selected="false">
+                            <span class="flag-icon flag-pl" aria-hidden="true"></span>
                             Polski
                         </a>
                     </div>
                 </div>
             </div>
-            <button class="mobile-nav-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
+            
+            <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Menü öffnen/schließen" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero section" id="home">
-        <div class="hero-content">
-            <h1 class="hero-title">CHANGELING</h1>
-            <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-    </section>
-
-    <!-- Galleries Section -->
-    <section class="galleries-section section" id="galleries">
-        <h2 class="section-title">Gallerien</h2>
-        <div class="galleries-grid">
-            <!-- Gallery 1 -->
-            <div class="gallery-card" onclick="openGallery(1)">
-                <div class="gallery-carousel" id="carousel1">
-                    <div class="carousel-container">
-                        <div class="carousel-slide slide-1">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Lorem Ipsum 1</div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide slide-2">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Lorem Ipsum 2</div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide slide-3">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Lorem Ipsum 3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-controls carousel-prev" onclick="event.stopPropagation(); prevSlide(1)">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-controls carousel-next" onclick="event.stopPropagation(); nextSlide(1)">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    <div class="carousel-nav">
-                        <span class="carousel-dot active" onclick="event.stopPropagation(); goToSlide(1, 0)"></span>
-                        <span class="carousel-dot" onclick="event.stopPropagation(); goToSlide(1, 1)"></span>
-                        <span class="carousel-dot" onclick="event.stopPropagation(); goToSlide(1, 2)"></span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3 class="gallery-title">Lorem Ipsum Collection</h3>
-                    <p class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    <p class="gallery-count">8 Werke</p>
-                </div>
-            </div>
-
-            <!-- Gallery 2 -->
-            <div class="gallery-card" onclick="openGallery(2)">
-                <div class="gallery-carousel" id="carousel2">
-                    <div class="carousel-container">
-                        <div class="carousel-slide slide-2">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Dolor Sit 1</div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide slide-3">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Dolor Sit 2</div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide slide-1">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Dolor Sit 3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-controls carousel-prev" onclick="event.stopPropagation(); prevSlide(2)">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-controls carousel-next" onclick="event.stopPropagation(); nextSlide(2)">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    <div class="carousel-nav">
-                        <span class="carousel-dot active" onclick="event.stopPropagation(); goToSlide(2, 0)"></span>
-                        <span class="carousel-dot" onclick="event.stopPropagation(); goToSlide(2, 1)"></span>
-                        <span class="carousel-dot" onclick="event.stopPropagation(); goToSlide(2, 2)"></span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3 class="gallery-title">Dolor Sit Gallery</h3>
-                    <p class="gallery-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                    <p class="gallery-count">6 Werke</p>
-                </div>
-            </div>
-
-            <!-- Gallery 3 -->
-            <div class="gallery-card" onclick="openGallery(3)">
-                <div class="gallery-carousel" id="carousel3">
-                    <div class="carousel-container">
-                        <div class="carousel-slide slide-3">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Consectetur 1</div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide slide-1">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Consectetur 2</div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide slide-2">
-                            <div class="slide-content">
-                                <i class="fas fa-image"></i>
-                                <div>Consectetur 3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-controls carousel-prev" onclick="event.stopPropagation(); prevSlide(3)">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-controls carousel-next" onclick="event.stopPropagation(); nextSlide(3)">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    <div class="carousel-nav">
-                        <span class="carousel-dot active" onclick="event.stopPropagation(); goToSlide(3, 0)"></span>
-                        <span class="carousel-dot" onclick="event.stopPropagation(); goToSlide(3, 1)"></span>
-                        <span class="carousel-dot" onclick="event.stopPropagation(); goToSlide(3, 2)"></span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3 class="gallery-title">Consectetur Adipiscing</h3>
-                    <p class="gallery-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                    <p class="gallery-count">5 Werke</p>
-                </div>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb Navigation">
+        <div class="breadcrumb-container">
+            <div class="breadcrumb-nav">
+                <a href="index.html" title="Startseite der ˈt͡su.rɘ/ Kunstgalerie">
+                    <i class="fas fa-home" aria-hidden="true"></i> Home
+                </a>
+                <span class="breadcrumb-separator" aria-hidden="true">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <a href="index.html#galleries">Gallerien</a>
+                <span class="breadcrumb-separator" aria-hidden="true">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- About Section -->
-    <section class="about-section section" id="about">
-        <div class="about-container">
-            <div class="artist-image">
-                <div>
-                    <i class="fas fa-user-circle" style="font-size: 4rem; opacity: 0.3;"></i><br>
-                    Künstlerportrait<br>
-                    <small>Foto folgt</small>
-                </div>
-            </div>
-            <div class="about-text">
-                <h3>Über die Künstlerin</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.</p>
-                
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coming Soon Section -->
-    <section class="coming-soon-section section" id="coming-soon">
-        <div class="coming-soon-container">
-            <h2 class="section-title">Coming Soon</h2>
-            <div class="coming-soon-card">
-                <div class="coming-soon-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h3 class="coming-soon-title">Lorem Ipsum</h3>
-                <p class="coming-soon-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
-                <div class="age-badge">18+</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section section" id="contact">
-        <div class="contact-container">
-            <h2 class="section-title">Kontakt</h2>
-            <p style="color: #cccccc; font-size: 1.1rem; margin-bottom: 40px;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-            </p>
+    <!-- Main Content -->
+    <main id="main" role="main">
+        <article class="gallery-showcase">
+            <header class="section-header">
+            </header>
             
-            <a href="https://instagram.com/changeling.art" target="_blank" class="instagram-link">
-                <i class="fab fa-instagram"></i>
-                @changeling.art
-            </a>
-        </div>
-    </section>
+            <!-- Hero Section -->
+            <section class="hero section" id="home" aria-labelledby="hero-title">
+                <div class="hero-content">
+                    <h2 class="hero-title" id="hero-title">ˈt͡su.rɘ/</h2>
+                    <p class="hero-subtitle">Lore Ipsum</p>
+                </div>
+            </section>
+
+            <!-- Galleries Section -->
+            <section class="galleries-section section" id="galleries" aria-labelledby="galleries-title">
+                <h2 class="section-title" id="galleries-title">Gallerien</h2>
+                <div class="galleries-grid" role="list">
+                    <!-- Gallery 1 -->
+                    <article class="gallery-card" role="listitem" onclick="openGallery(1)" onkeydown="handleCardKeydown(event, 1)" tabindex="0" aria-labelledby="gallery1-title">
+                        <div class="gallery-carousel" id="carousel1" aria-label="Galerie 1 Bildkarussell">
+                            <div class="carousel-container" role="img" aria-label="Kunstwerk Vorschau">
+                                <div class="carousel-slide slide-1 image-placeholder thumbnail-1" role="img" aria-label="Acrylgemälde 'Morgendämmerung' aus der Serie Emotionen in Farbe - abstrakte Landschaft in warmen Rot- und Goldtönen, 70x50cm, Acryl auf Leinwand">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 1</div>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide slide-2">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 2</div>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide slide-3">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 3</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-controls carousel-prev" 
+                                    onclick="event.stopPropagation(); prevSlide(1)" 
+                                    aria-label="Vorheriges Bild anzeigen">
+                                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-controls carousel-next" 
+                                    onclick="event.stopPropagation(); nextSlide(1)" 
+                                    aria-label="Nächstes Bild anzeigen">
+                                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                            <div class="carousel-nav" role="tablist" aria-label="Karussell Navigation">
+                                <button class="carousel-dot active" 
+                                        onclick="event.stopPropagation(); goToSlide(1, 0)" 
+                                        role="tab" 
+                                        aria-selected="true" 
+                                        aria-label="Bild 1 anzeigen"></button>
+                                <button class="carousel-dot" 
+                                        onclick="event.stopPropagation(); goToSlide(1, 1)" 
+                                        role="tab" 
+                                        aria-selected="false" 
+                                        aria-label="Bild 2 anzeigen"></button>
+                                <button class="carousel-dot" 
+                                        onclick="event.stopPropagation(); goToSlide(1, 2)" 
+                                        role="tab" 
+                                        aria-selected="false" 
+                                        aria-label="Bild 3 anzeigen"></button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3 class="gallery-title" id="gallery1-title">Gallerie 1</h3>
+                            <p class="gallery-description">Lore Ipsum 1</p>
+                            <p class="gallery-count" aria-label="Anzahl der Werke">8 Werke</p>
+                        </div>
+                    </article>
+
+                    <!-- Gallery 2 -->
+                    <article class="gallery-card" role="listitem" onclick="openGallery(2)" onkeydown="handleCardKeydown(event, 2)" tabindex="0" aria-labelledby="gallery2-title">
+                        <div class="gallery-carousel" id="carousel2" aria-label="Galerie 2 Bildkarussell">
+                            <div class="carousel-container" role="img" aria-label="Kunstwerk Vorschau">
+                                <div class="carousel-slide slide-2">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 4</div>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide slide-3">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 5</div>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide slide-1">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 6</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-controls carousel-prev" 
+                                    onclick="event.stopPropagation(); prevSlide(2)" 
+                                    aria-label="Vorheriges Bild anzeigen">
+                                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-controls carousel-next" 
+                                    onclick="event.stopPropagation(); nextSlide(2)" 
+                                    aria-label="Nächstes Bild anzeigen">
+                                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                            <div class="carousel-nav" role="tablist" aria-label="Karussell Navigation">
+                                <button class="carousel-dot active" 
+                                        onclick="event.stopPropagation(); goToSlide(2, 0)" 
+                                        role="tab" 
+                                        aria-selected="true" 
+                                        aria-label="Bild 1 anzeigen"></button>
+                                <button class="carousel-dot" 
+                                        onclick="event.stopPropagation(); goToSlide(2, 1)" 
+                                        role="tab" 
+                                        aria-selected="false" 
+                                        aria-label="Bild 2 anzeigen"></button>
+                                <button class="carousel-dot" 
+                                        onclick="event.stopPropagation(); goToSlide(2, 2)" 
+                                        role="tab" 
+                                        aria-selected="false" 
+                                        aria-label="Bild 3 anzeigen"></button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3 class="gallery-title" id="gallery2-title">Gallerie 2</h3>
+                            <p class="gallery-description">Lore Ipsum 2</p>
+                            <p class="gallery-count" aria-label="Anzahl der Werke">6 Werke</p>
+                        </div>
+                    </article>
+
+                    <!-- Gallery 3 -->
+                    <article class="gallery-card" role="listitem" onclick="openGallery(3)" onkeydown="handleCardKeydown(event, 3)" tabindex="0" aria-labelledby="gallery3-title">
+                        <div class="gallery-carousel" id="carousel3" aria-label="Galerie 3 Bildkarussell">
+                            <div class="carousel-container" role="img" aria-label="Kunstwerk Vorschau">
+                                <div class="carousel-slide slide-3">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 7</div>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide slide-1">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 8</div>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide slide-2">
+                                    <div class="slide-content">
+                                        <i class="fas fa-image" aria-hidden="true"></i>
+                                        <div>Bild 9</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-controls carousel-prev" 
+                                    onclick="event.stopPropagation(); prevSlide(3)" 
+                                    aria-label="Vorheriges Bild anzeigen">
+                                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-controls carousel-next" 
+                                    onclick="event.stopPropagation(); nextSlide(3)" 
+                                    aria-label="Nächstes Bild anzeigen">
+                                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                            <div class="carousel-nav" role="tablist" aria-label="Karussell Navigation">
+                                <button class="carousel-dot active" 
+                                        onclick="event.stopPropagation(); goToSlide(3, 0)" 
+                                        role="tab" 
+                                        aria-selected="true" 
+                                        aria-label="Bild 1 anzeigen"></button>
+                                <button class="carousel-dot" 
+                                        onclick="event.stopPropagation(); goToSlide(3, 1)" 
+                                        role="tab" 
+                                        aria-selected="false" 
+                                        aria-label="Bild 2 anzeigen"></button>
+                                <button class="carousel-dot" 
+                                        onclick="event.stopPropagation(); goToSlide(3, 2)" 
+                                        role="tab" 
+                                        aria-selected="false" 
+                                        aria-label="Bild 3 anzeigen"></button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3 class="gallery-title" id="gallery3-title"> Gallerie 3</h3>
+                            <p class="gallery-description">Lore Ipsum</p>
+                            <p class="gallery-count" aria-label="Anzahl der Werke">5 Werke</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section section" id="about" aria-labelledby="about-title">
+                <div class="about-container">
+                    <div class="artist-image" role="img" aria-label="Portrait der zeitgenössischen Künstlerin ˈt͡su.rɘ/ in ihrem Atelier, umgeben von farbenfrohen Acrylgemälden und Arbeitsmaterialien">
+                        <div>
+                            <i class="fas fa-user-circle" aria-hidden="true"></i><br>
+                            Künstlerportrait<br>
+                            <small>Foto folgt</small>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h2 id="about-title">Über die Künstlerin ˈt͡su.rɘ/</h2>
+                        <p>ˈt͡su.rɘ/ ist eine multidisziplinäre Künstlerin mit Sitz im Herzen Europas. Ihre Arbeit umfasst viele Richtungen, mit einem festen Fundament in der Folkloristik. Ihre schlüpfrigeren Arbeiten sind auf der Seite +18 unten zu finden - der Betrachter wird um Diskretion gebeten. Obwohl die Arbeiten selbst nicht pornografisch sind, könnten einige Betrachter die Themen und Bilder als unangemessen empfinden.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coming Soon Section -->
+            <section class="coming-soon-section section" id="coming-soon" aria-labelledby="coming-soon-title">
+                <div class="coming-soon-container">
+                    <h2 class="section-title" id="coming-soon-title">Coming Soon</h2>
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-icon" aria-hidden="true">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="coming-soon-title">after hours</h3>
+                        <p class="coming-soon-description">
+                            Hier entsteht später ein Bereich der noch geheim bleiben soll (Written bei Morten, not AI :P )
+                        </p>
+                        <div class="age-badge" aria-label="Altersfreigabe">18+</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section section" id="contact" aria-labelledby="contact-title">
+                <div class="contact-container">
+                    <h2 class="section-title" id="contact-title">Kontakt</h2>
+                    <div class="contact-content">
+                        <p>Lore Ipsum -> Hier soll ein Text rein, der nett ist :) </p>
+                    </div>
+                    
+                    <a href="https://instagram.com/_changeling13" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="instagram-link"
+                       aria-label="Folgen Sie ˈt͡su.rɘ/ auf Instagram (öffnet in neuem Tab)">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        @_changeling13
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
-            <p>&copy; 2024 CHANGELING - Kunstgalerie. Alle Rechte vorbehalten.</p>
+            <div class="footer-main">
+                <p>&copy; 2024 ˈt͡su.rɘ/ - Kunstgalerie. Alle Rechte vorbehalten.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="pages/impressum.html" class="footer-link">Impressum</a>
+                <span class="footer-separator">|</span>
+                <a href="pages/datenschutz.html" class="footer-link">Datenschutz</a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;" aria-hidden="true">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>🍪 Cookies & Datenschutz</h3>
+                <p>Diese Website nutzt nur technisch notwendige Cookies für die Grundfunktionen. Externe Inhalte (Font Awesome CDN) werden nur mit Ihrer Zustimmung geladen.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button onclick="acceptCookies()" class="cookie-accept" aria-label="Cookies akzeptieren">Akzeptieren</button>
+                <button onclick="rejectCookies()" class="cookie-reject" aria-label="Cookies ablehnen">Ablehnen</button>
+                <a href="pages/datenschutz.html" class="cookie-details">Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading indicator for better UX -->
+    <div id="loading-indicator" aria-hidden="true" style="display: none;">
+        <div class="spinner" role="status" aria-label="Lädt..."></div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Additional accessibility functions -->
     <script>
-        // Carousel Management
-        const carousels = {
-            1: { currentSlide: 0, totalSlides: 3 },
-            2: { currentSlide: 0, totalSlides: 3 },
-            3: { currentSlide: 0, totalSlides: 3 }
-        };
-
-        // DOM Content Loaded
+        // Enhanced keyboard navigation for gallery cards
+        function handleCardKeydown(event, galleryId) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openGallery(galleryId);
+            }
+        }
+        
+        // Improve focus management
         document.addEventListener('DOMContentLoaded', function() {
-            initializeNavigation();
-            initializeCarousels();
-            initializeScrollEffects();
-        });
-
-        // Navigation Functions
-        function initializeNavigation() {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const offsetTop = target.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        document.getElementById('navLinks').classList.remove('mobile-open');
-                        updateMobileToggleIcon();
-                    }
+            // Add focus indicators for better accessibility
+            const focusableElements = document.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            
+            focusableElements.forEach(element => {
+                element.addEventListener('focus', function() {
+                    this.classList.add('focus-visible');
+                });
+                
+                element.addEventListener('blur', function() {
+                    this.classList.remove('focus-visible');
                 });
             });
-
-            // Mobile navigation toggle
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navLinks = document.getElementById('navLinks');
-
-            mobileToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('mobile-open');
-                updateMobileToggleIcon();
-            });
-
-            // Close mobile nav when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.navbar')) {
-                    navLinks.classList.remove('mobile-open');
-                    updateMobileToggleIcon();
-                }
-            });
-        }
-
-        function updateMobileToggleIcon() {
-            const toggle = document.getElementById('mobileToggle');
-            const navLinks = document.getElementById('navLinks');
-            const icon = toggle.querySelector('i');
-            
-            if (navLinks.classList.contains('mobile-open')) {
-                icon.className = 'fas fa-times';
-            } else {
-                icon.className = 'fas fa-bars';
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Carousel Functions
-        function initializeCarousels() {
-            // Auto-rotate carousels
-            setInterval(() => {
-                for (let i = 1; i <= 3; i++) {
-                    nextSlide(i, true); // auto = true
-                }
-            }, 4000);
-        }
-
-        function nextSlide(carouselId, auto = false) {
-            const carousel = carousels[carouselId];
-            carousel.currentSlide = (carousel.currentSlide + 1) % carousel.totalSlides;
-            updateCarousel(carouselId);
-        }
-
-        function prevSlide(carouselId) {
-            const carousel = carousels[carouselId];
-            carousel.currentSlide = (carousel.currentSlide - 1 + carousel.totalSlides) % carousel.totalSlides;
-            updateCarousel(carouselId);
-        }
-
-        function goToSlide(carouselId, slideIndex) {
-            const carousel = carousels[carouselId];
-            carousel.currentSlide = slideIndex;
-            updateCarousel(carouselId);
-        }
-
-        function updateCarousel(carouselId) {
-            const carousel = document.querySelector(`#carousel${carouselId}`);
-            const container = carousel.querySelector('.carousel-container');
-            const dots = carousel.querySelectorAll('.carousel-dot');
-            
-            // Update slide position
-            const translateX = -carousels[carouselId].currentSlide * 100;
-            container.style.transform = `translateX(${translateX}%)`;
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === carousels[carouselId].currentSlide);
-            });
-        }
-
-        // Gallery Functions
-        function openGallery(galleryId) {
-            // Open the actual gallery pages
-            switch(galleryId) {
-                case 1:
-                    window.location.href = 'gallery1.html';
-                    break;
-                case 2:
-                    window.location.href = 'gallery2.html';
-                    break;
-                case 3:
-                    window.location.href = 'gallery3.html';
-                    break;
-                default:
-                    console.log('Gallery not found');
-            }
-        }
-
-        // Scroll Effects
-        function initializeScrollEffects() {
-            // Navbar background on scroll
-            window.addEventListener('scroll', function() {
-                const navbar = document.getElementById('navbar');
-                const scrolled = window.scrollY > 100;
-                
-                if (scrolled) {
-                    navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-                    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-                } else {
-                    navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-                    navbar.style.boxShadow = 'none';
-                }
-
-                // Update active navigation item
-                updateActiveNavItem();
-            });
-
-            // Intersection Observer for animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all cards
-            document.querySelectorAll('.gallery-card, .coming-soon-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
-            });
-        }
-
-        function updateActiveNavItem() {
-            const sections = document.querySelectorAll('.section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let currentSection = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + currentSection) {
-                    link.classList.add('active');
-                }
-            });
-        }
-
-        // Utility Functions
-        function showNotification(message) {
-            // Remove existing notification
-            const existingNotification = document.querySelector('.notification');
-            if (existingNotification) {
-                existingNotification.remove();
-            }
-
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: linear-gradient(45deg, #e91e63, #9c27b0);
-                color: white;
-                padding: 15px 25px;
-                border-radius: 10px;
-                z-index: 10001;
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-                box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
-                font-weight: 500;
-                max-width: 300px;
-            `;
-
-            document.body.appendChild(notification);
-
-            // Animate in
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-
-            // Animate out and remove
-            setTimeout(() => {
-                notification.style.transform = 'translateX(100%)';
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
-                    }
-                }, 300);
-            }, 3000);
-        }
-
-        // Keyboard Navigation
-        document.addEventListener('keydown', function(e) {
-            // Arrow keys for carousel navigation when focused
-            if (e.key === 'ArrowLeft' && e.target.closest('.gallery-card')) {
-                const galleryCard = e.target.closest('.gallery-card');
-                const carouselId = parseInt(galleryCard.querySelector('[id^="carousel"]').id.replace('carousel', ''));
-                prevSlide(carouselId);
-            }
-            
-            if (e.key === 'ArrowRight' && e.target.closest('.gallery-card')) {
-                const galleryCard = e.target.closest('.gallery-card');
-                const carouselId = parseInt(galleryCard.querySelector('[id^="carousel"]').id.replace('carousel', ''));
-                nextSlide(carouselId);
-            }
-            
-            // Scroll navigation
-            if (e.key === 'ArrowDown' && e.ctrlKey) {
-                e.preventDefault();
-                window.scrollBy(0, 300);
-            }
-            
-            if (e.key === 'ArrowUp' && e.ctrlKey) {
-                e.preventDefault();
-                window.scrollBy(0, -300);
-            }
         });
+    </script>
 
-        // Add active navigation style
-        const activeNavStyle = `
-            .nav-links a.active {
-                color: #e91e63;
-            }
-            .nav-links a.active::after {
-                width: 100%;
-            }
-        `;
+    <!-- Cookie Banner JavaScript -->
+    <script>
+    // Cookie Banner Management
+    document.addEventListener('DOMContentLoaded', function() {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const cookieAccepted = localStorage.getItem('cookies-accepted');
+        
+        // Show banner if no decision made
+        if (!cookieAccepted) {
+            setTimeout(() => {
+                cookieBanner.style.display = 'block';
+                cookieBanner.setAttribute('aria-hidden', 'false');
+            }, 1000);
+        }
+    });
 
-        const styleSheet = document.createElement('style');
-        styleSheet.textContent = activeNavStyle;
-        document.head.appendChild(styleSheet);
+    function acceptCookies() {
+        localStorage.setItem('cookies-accepted', 'true');
+        hideCookieBanner();
+        loadExternalResources();
+    }
 
-        // Console easter egg
-        console.log('%cCHANGELING Art Gallery', 'color: #e91e63; font-size: 20px; font-weight: bold;');
-        console.log('%cVersion 1.0 - Zeitgenössische Kunst & Malerei', 'color: #9c27b0; font-style: italic;');
-        console.log('%cEntwickelt mit ❤️', 'color: #00bcd4;');
+    function rejectCookies() {
+        localStorage.setItem('cookies-accepted', 'false');
+        hideCookieBanner();
+        
+        // Show notification about limited functionality
+        if (typeof showNotification === 'function') {
+            showNotification('Externe Inhalte werden nicht geladen. Einige Icons könnten nicht angezeigt werden.');
+        }
+    }
+
+    function hideCookieBanner() {
+        const cookieBanner = document.getElementById('cookie-banner');
+        cookieBanner.style.display = 'none';
+        cookieBanner.setAttribute('aria-hidden', 'true');
+    }
+
+    function loadExternalResources() {
+        // External resources are already loaded in head, this is for future use
+        console.log('External resources loaded with user consent');
+    }
     </script>
 </body>
 </html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallerie 1">
+    <meta name="keywords" content="ˈt͡su.rɘ/">
+    <meta name="author" content="ˈt͡su.rɘ/">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gallerie 1 | ˈt͡su.rɘ/ Art Gallery">
+    <meta property="og:description" content="Gallerie 1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mo77enst.github.io/pages/gallery1.html">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://mo77enst.github.io/pages/gallery1.html">
+    
+    <title>Gallerie 1 | ˈt͡su.rɘ/ Art Gallery</title>
+    
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main" class="skip-link" aria-label="Zum Hauptinhalt springen">Zum Hauptinhalt springen</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" aria-label="ˈt͡su.rɘ/ Kunstgalerie Startseite">ˈt͡su.rɘ/</a>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks" role="menubar">
+                    <li role="none"><a href="../index.html#home" role="menuitem">Home</a></li>
+                    <li class="nav-dropdown" role="none">
+                        <a href="../index.html#galleries" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Gallerien
+                            <i class="fas fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-content" role="menu">
+                            <a href="gallery1.html" role="menuitem" class="active">Gallerie 1</a>
+                            <a href="gallery2.html" role="menuitem">Gallerie 2</a>
+                            <a href="gallery3.html" role="menuitem">Gallerie 3</a>
+                        </div>
+                    </li>
+                    <li role="none"><a href="../index.html#about" role="menuitem">Über mich</a></li>
+                    <li role="none"><a href="../index.html#contact" role="menuitem">Kontakt</a></li>
+                </ul>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <div class="language-button">
+                        <span class="flag-icon flag-de"></span>
+                        DE
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="gallery1.html" class="active">
+                            <span class="flag-icon flag-de"></span>
+                            Deutsch
+                        </a>
+                        <a href="gallery1-en.html">
+                            <span class="flag-icon flag-en"></span>
+                            English
+                        </a>
+                        <a href="gallery1-pl.html">
+                            <span class="flag-icon flag-pl"></span>
+                            Polski
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Menü öffnen/schließen">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb Navigation">
+        <div class="breadcrumb-container">
+            <div class="breadcrumb-nav">
+                <a href="../index.html" title="Startseite der ˈt͡su.rɘ/ Kunstgalerie">
+                    <i class="fas fa-home" aria-hidden="true"></i> Home
+                </a>
+                <span class="breadcrumb-separator" aria-hidden="true">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <a href="../index.html#galleries">Gallerien</a>
+                <span class="breadcrumb-separator" aria-hidden="true">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="breadcrumb-current">Gallerie 1</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <h1 class="gallery-title">Gallerie 1</h1>
+        <p class="gallery-subtitle">
+            Lore Ipsum
+        </p>
+    </section>
+
+    <!-- Gallery Content -->
+    <main id="main" class="gallery-content">
+        <!-- Main Display -->
+        <div class="main-display">
+            <div class="image-placeholder thumbnail-1" id="mainDisplay" role="img" aria-label="Hauptansicht des ausgewählten Kunstwerks">
+                <i class="fas fa-image" aria-hidden="true"></i>
+                <div>Bild 1</div>
+                <small>Klicken Sie auf ein Vorschaubild</small>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <!-- Thumbnails -->
+            <div class="thumbnails-section">
+                <h2 class="thumbnails-title">Werksammlung (8 Werke)</h2>
+                <div class="thumbnails-container">
+                    <button class="thumbnail-nav prev" onclick="Gallery.navigateThumbnails(-1)" id="prevBtn" aria-label="Vorherige Kunstwerke anzeigen">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="thumbnail-nav next" onclick="Gallery.navigateThumbnails(1)" id="nextBtn" aria-label="Nächste Kunstwerke anzeigen">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                    <div class="thumbnails-grid" id="thumbnailsGrid" role="list" aria-label="Vorschaubilder der Kunstwerke">
+                        <div class="thumbnail thumbnail-1 active" onclick="Gallery.selectArtwork(1)" onkeydown="handleThumbnailKeydown(event, 1)" tabindex="0" role="listitem" aria-label="Werk 1">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 1</div>
+                            </div>
+                        </div>
+                        <div class="thumbnail thumbnail-2" onclick="Gallery.selectArtwork(2)" onkeydown="handleThumbnailKeydown(event, 2)" tabindex="0" role="listitem" aria-label="Werk 2">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 2</div>
+                            </div>
+                        </div>
+                        <div class="thumbnail thumbnail-3" onclick="Gallery.selectArtwork(3)" onkeydown="handleThumbnailKeydown(event, 3)" tabindex="0" role="listitem" aria-label="Werk 3">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 3</div>
+                            </div>
+                        </div>
+                        <div class="thumbnail thumbnail-4" onclick="Gallery.selectArtwork(4)" onkeydown="handleThumbnailKeydown(event, 4)" tabindex="0" role="listitem" aria-label="Werk 4">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 4</div>
+                            </div>
+                        </div>
+                        <div class="thumbnail thumbnail-5" onclick="Gallery.selectArtwork(5)" onkeydown="handleThumbnailKeydown(event, 5)" tabindex="0" role="listitem" aria-label="Werk 5">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 5</div>
+                            </div>
+                        </div>
+                        <div class="thumbnail thumbnail-6" onclick="Gallery.selectArtwork(6)" onkeydown="handleThumbnailKeydown(event, 6)" tabindex="0" role="listitem" aria-label="Werk 6">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 6</div>
+                            </div>
+                        </div>
+                        <div class="thumbnail thumbnail-7" onclick="Gallery.selectArtwork(7)" onkeydown="handleThumbnailKeydown(event, 7)" tabindex="0" role="listitem" aria-label="Werk 7">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 7</div>
+                            </div>
+                        </div>
+                        <div class="thumbnail thumbnail-8" onclick="Gallery.selectArtwork(8)" onkeydown="handleThumbnailKeydown(event, 8)" tabindex="0" role="listitem" aria-label="Werk 8">
+                            <div class="thumbnail-placeholder">
+                                <i class="fas fa-image" aria-hidden="true"></i>
+                                <div>Werk 8</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="description-section" id="descriptionSection">
+                <h3 class="artwork-title">Werk 1</h3>
+                <div class="artwork-details">
+                    <span><strong>Technik:</strong> Acryl auf Leinwand</span>
+                    <span><strong>Größe:</strong> 70 x 50 cm</span>
+                    <span><strong>Jahr:</strong> 2024</span>
+                    <span><strong>Serie:</strong> Gallerie 1</span>
+                </div>
+                <p class="artwork-description">
+                    Beschreibungstext des Werkes
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-main">
+                <p>&copy; 2024 ˈt͡su.rɘ/ - Kunstgalerie. Alle Rechte vorbehalten.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="impressum.html" class="footer-link">Impressum</a>
+                <span class="footer-separator">|</span>
+                <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;" aria-hidden="true">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>🍪 Cookies & Datenschutz</h3>
+                <p>Diese Website nutzt nur technisch notwendige Cookies für die Grundfunktionen. Externe Inhalte (Font Awesome CDN) werden nur mit Ihrer Zustimmung geladen.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button onclick="acceptCookies()" class="cookie-accept" aria-label="Cookies akzeptieren">Akzeptieren</button>
+                <button onclick="rejectCookies()" class="cookie-reject" aria-label="Cookies ablehnen">Ablehnen</button>
+                <a href="datenschutz.html" class="cookie-details">Details</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Enhanced keyboard navigation for thumbnails
+        function handleThumbnailKeydown(event, artworkId) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                Gallery.selectArtwork(artworkId);
+            }
+        }
+
+        // Gallery namespace for this page
+        window.Gallery = (function() {
+            // Artwork data for Emotionen in Farbe collection
+            const artworkData = {
+                1: {
+                    title: "Werk1",
+                    technique: "Acryl auf Leinwand",
+                    size: "70 x 50 cm",
+                    year: "2024",
+                    series: "Gallerie 1",
+                    description: "Beschreibung des Werkes",
+                    mainClass: "thumbnail-1"
+                },
+                2: {
+                    title: "Werk 2",
+                    technique: "Acryl auf Leinwand",
+                    size: "60 x 40 cm",
+                    year: "2024",
+                    series: "Gallerie 1",
+                    description: "Beschreibung Werk 2",
+                    mainClass: "thumbnail-2"
+                },
+                3: {
+                    title: "Werk 3",
+                    technique: "Acryl auf Leinwand",
+                    size: "50 x 35 cm",
+                    year: "2024",
+                    series: "Gallerie 1",
+                    description: "Beschreibung Werk 3",
+                    mainClass: "thumbnail-3"
+                },
+                4: {
+                    title: "Werk 4",
+                    technique: "Acryl auf Leinwand",
+                    size: "80 x 60 cm",
+                    year: "2024",
+                    series: "Gallerie 1",
+                    description: "Beschreibung Werk 4",
+                    mainClass: "thumbnail-4"
+                },
+                5: {
+                    title: "Emotionale Wellen",
+                    technique: "Acryl auf Leinwand",
+                    size: "90 x 70 cm",
+                    year: "2024",
+                    series: "Emotionen in Farbe",
+                    description: "Fließende Formen in verschiedenen Blautönen erzählen von emotionalen Höhen und Tiefen. Das großformatige Werk lädt zur Meditation über die Wellenbewegungen des Lebens ein.",
+                    mainClass: "thumbnail-5"
+                },
+                6: {
+                    title: "Goldene Träume",
+                    technique: "Acryl auf Leinwand",
+                    size: "65 x 45 cm",
+                    year: "2024",
+                    series: "Emotionen in Farbe",
+                    description: "Schimmernde Goldtöne und warme Gelbnuancen erschaffen eine Traumlandschaft voller Hoffnung. Ein optimistisches Werk über Wünsche, Träume und die Kraft der Vorstellung.",
+                    mainClass: "thumbnail-6"
+                },
+                7: {
+                    title: "Innere Ruhe",
+                    technique: "Acryl auf Leinwand",
+                    size: "55 x 40 cm",
+                    year: "2024",
+                    series: "Emotionen in Farbe",
+                    description: "Sanfte Grüntöne und beruhigende Naturfarben schaffen eine Oase der Ruhe. Das Werk verkörpert Frieden, Ausgeglichenheit und die heilende Kraft der Natur.",
+                    mainClass: "thumbnail-7"
+                },
+                8: {
+                    title: "Lebensenergie",
+                    technique: "Acryl auf Leinwand",
+                    size: "75 x 55 cm",
+                    year: "2024",
+                    series: "Emotionen in Farbe",
+                    description: "Lebendige Farben und energiegeladene Pinselführung symbolisieren pure Lebenskraft. Ein vitales Werk über Energie, Dynamik und die Freude am Leben.",
+                    mainClass: "thumbnail-8"
+                }
+            };
+
+            // Private variables
+            let currentThumbnailPage = 0;
+            const thumbnailsPerPage = 4;
+            const totalPages = Math.ceil(8 / thumbnailsPerPage) - 1;
+
+            // Public methods
+            function navigateThumbnails(direction) {
+                const newPage = currentThumbnailPage + direction;
+    
+                 if (newPage < 0 || newPage > totalPages) {
+                return;
+                 }
+    
+                currentThumbnailPage = newPage;
+    
+                const grid = document.getElementById('thumbnailsGrid');
+                if (grid) {
+                    // Korrekte Berechnung: 2 Reihen * (150px Höhe + 15px Gap)
+                    const rowHeight = 150 + 15; // 165px
+                    const translateY = -currentThumbnailPage * 2 * rowHeight; // 2 Reihen pro Seite
+                    grid.style.transform = `translateY(${translateY}px)`;
+        
+                // Update button states
+                 const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                if (prevBtn) prevBtn.disabled = currentThumbnailPage === 0;
+                if (nextBtn) nextBtn.disabled = currentThumbnailPage === totalPages;
+                }
+            }
+
+            function selectArtwork(artworkId) {
+                const artwork = artworkData[artworkId];
+                if (!artwork) return;
+                
+                // Remove active class from all thumbnails
+                document.querySelectorAll('.thumbnail').forEach(thumb => {
+                    thumb.classList.remove('active');
+                });
+                
+                // Add active class to selected thumbnail
+                const selectedThumbnail = document.querySelector(`.thumbnail:nth-child(${artworkId})`);
+                if (selectedThumbnail) {
+                    selectedThumbnail.classList.add('active');
+                }
+                
+                // Update main display
+                const mainDisplay = document.getElementById('mainDisplay');
+                if (mainDisplay) {
+                    mainDisplay.className = `image-placeholder ${artwork.mainClass}`;
+                    mainDisplay.innerHTML = `
+                        <i class="fas fa-image" aria-hidden="true"></i>
+                        <div>${artwork.title}</div>
+                        <small>Hauptansicht</small>
+                    `;
+                }
+                
+                // Update description
+                const descriptionSection = document.getElementById('descriptionSection');
+                if (descriptionSection) {
+                    descriptionSection.innerHTML = `
+                        <h3 class="artwork-title">${artwork.title}</h3>
+                        <div class="artwork-details">
+                            <span><strong>Technik:</strong> ${artwork.technique}</span>
+                            <span><strong>Größe:</strong> ${artwork.size}</span>
+                            <span><strong>Jahr:</strong> ${artwork.year}</span>
+                            <span><strong>Serie:</strong> ${artwork.series}</span>
+                        </div>
+                        <p class="artwork-description">${artwork.description}</p>
+                    `;
+                }
+                
+                // Add animation
+                if (mainDisplay) {
+                    mainDisplay.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        mainDisplay.style.transform = 'scale(1)';
+                    }, 100);
+                }
+            }
+
+            function init() {
+                // Add smooth transitions
+                document.querySelectorAll('.thumbnail, .main-display').forEach(element => {
+                    element.style.transition = 'all 0.3s ease';
+                });
+                
+                // Initialize thumbnail navigation
+                const prevBtn = document.getElementById('prevBtn');
+                if (prevBtn) {
+                    prevBtn.disabled = true;
+                }
+                
+                // Hide navigation if not needed
+                if (totalPages === 0) {
+                    const prevBtn = document.getElementById('prevBtn');
+                    const nextBtn = document.getElementById('nextBtn');
+                    if (prevBtn) prevBtn.style.display = 'none';
+                    if (nextBtn) nextBtn.style.display = 'none';
+                }
+            }
+
+            // Initialize on DOM ready
+            document.addEventListener('DOMContentLoaded', init);
+
+            // Return public interface
+            return {
+                navigateThumbnails: navigateThumbnails,
+                selectArtwork: selectArtwork
+            };
+        })();
+
+        // Cookie Banner JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const cookieAccepted = localStorage.getItem('cookies-accepted');
+            
+            // Show banner if no decision made
+            if (!cookieAccepted) {
+                setTimeout(() => {
+                    cookieBanner.style.display = 'block';
+                    cookieBanner.setAttribute('aria-hidden', 'false');
+                }, 1000);
+            }
+        });
+
+        function acceptCookies() {
+            localStorage.setItem('cookies-accepted', 'true');
+            hideCookieBanner();
+            loadExternalResources();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookies-accepted', 'false');
+            hideCookieBanner();
+            
+            // Show notification about limited functionality
+            if (typeof showNotification === 'function') {
+                showNotification('Externe Inhalte werden nicht geladen. Einige Icons könnten nicht angezeigt werden.');
+            }
+        }
+
+        function hideCookieBanner() {
+            const cookieBanner = document.getElementById('cookie-banner');
+            cookieBanner.style.display = 'none';
+            cookieBanner.setAttribute('aria-hidden', 'true');
+        }
+
+        function loadExternalResources() {
+            // External resources are already loaded in head, this is for future use
+            console.log('External resources loaded with user consent');
+        }
+    </script>
+</body>
+</html>
