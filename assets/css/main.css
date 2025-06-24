@@ -29,7 +29,7 @@
 
 /* Base Styles */
 body {
-    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-family: calibri;
     background: var(--section-bg);
     color: var(--text-dark);
     line-height: 1.6;
@@ -176,7 +176,7 @@ body {
 
 .logo {
     font-size: 2rem;
-    font-weight: bold;
+    /*font-weight: bold;*/
     background: var(--text-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -562,6 +562,7 @@ body {
     background: var(--text-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
     background-clip: text;
     line-height: 1.2;
     padding-top: 1.5rem; /* oder mehr, je nach Bedarf */
